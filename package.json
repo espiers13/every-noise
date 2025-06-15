@@ -2,7 +2,7 @@
   "name": "every-noise",
   "version": "1.0.0",
   "description": "Backend database for audience members to send in sounds for Natalie to impersonate.",
-  "main": "index.js",
+"main": "listen.js",
   "scripts": {
     "setup-dbs": "psql -f db/setup.sql",
     "seed": "PGDATABASE=every_noise node ./db/seeds/run-seed.js",
