@@ -1,0 +1,33 @@
+{
+  "name": "every-noise",
+  "version": "1.0.0",
+  "description": "Backend database for audience members to send in sounds for Natalie to impersonate.",
+  "main": "index.js",
+  "scripts": {
+    "setup-dbs": "psql -f db/setup.sql",
+    "seed": "PGDATABASE=every_noise node ./db/seeds/run-seed.js",
+    "test": "jest",
+    "seed-test": "PGDATABASE=every_noise_test node db/run-seed.js",
+    "start": "node listen.js",
+    "seed-prod": "NODE_ENV=production npm run seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/espiers13/every-noise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/espiers13/every-noise/issues"
+  },
+  "homepage": "https://github.com/espiers13/every-noise#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jest": "^30.0.0",
+    "pg": "^8.16.0",
+    "pg-format": "^1.0.4",
+    "supertest": "^7.1.1"
+  }
+}
